@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Scrollipop Documentation</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="description" content="Freecodecamp Documentation Project">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript, freecodecamp">
+		<meta name="author" content="Liana George">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+		<style>
+			html,body{
+				display:flex;
+				min-height:100vh;
+				padding:0;
+				margin:0;
+				font-family:'Open Sans',sans-serif;
+			}
+
+			p{
+				width:60vw;
+			}
+
+			li{
+				padding:10px 0 0 0;
+			}
+
+			pre{
+				border:1px solid black;
+				border-radius:5px;
+				padding:5px;
+				width:35vw;
+				overflow-x:scroll;
+			}
+			code{
+				text-align:left;
+			}
+
+			header{
+				font-size:30px;
+				font-weight: 400;	
+			}
+
+			nav{
+				position:fixed;
+				display:flex;
+				flex-direction:column;
+				order:1;
+				width:20vw;
+				height:100vh;
+				overflow:hidden;
+			}
+
+			nav header{
+				font-size: 24px;
+				padding: 20px 0 10px 20px;
+			}
+
+			a:link{
+				text-decoration:none;
+				color:black;
+			}
+
+			a:visited{
+				color:black;
+			}
+
+			nav a:link{
+				text-decoration: none;
+				color:black;
+				border-top:1px solid black;
+				padding:10px 0 10px 20px;
+			}
+
+			#copyright{
+				display:grid;
+				grid-template-columns:17vw;
+				grid-template-rows:30vh;
+				font-size:12px;
+				align-self:end;
+				padding:15px;
+			}
+
+			main{
+				position:relative;
+				border-left:2px solid gray;
+				padding:0 0 0 25px;
+				order:1;
+				width:50vw;
+				left:20vw;
+			}
+
+			main header{
+				padding:25px 0 0 0;
+			}
+
+			@media screen and (max-width:500px){
+				nav{
+					display:none;
+				}
+				main{
+					border-left:0;
+					left:1vw;
+				}
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<nav id="navbar">
+			<header>Scrollipop Documentation</header>
+			<a class="nav-link" href="#about">About</a>
+			<a class="nav-link" href="#download">Download</a>
+			<a class="nav-link" href="#setup">Setup</a>
+			<a class="nav-link" href="#usage">Usage</a>
+			<a class="nav-link" href="#adding_a_navigation">Adding a Navigation</a>
+			<a class="nav-link" href="#multiple_nav_elements">Multiple Nav Elements</a>
+			<a class="nav-link" href="#styling">Styling</a>
+			<p id="copyright">Scrollipop is Copyright © 2016 Liana G.</p>
+		</nav>
+
+		<main id="main-doc">
+			<section id="about" class="main-section">
+				<header>About</header>
+				<p>No patience to write up yet another sliding script to make your website more dynamic? Perhaps you have little development experience at all, and want a simpler way to utilize the same, eye-catching effect.</p>
+				<p>Done and done. With scrollipop, you can create an animated, scrolling website in mere seconds (yes, really), with minimal development knowledge.</p>
+				<p>NOTE: This is a freecodecamp documentation project design for my own, real, javascript page-building tool 'Scrollipop'.</p>
+			</section>
+			<section id="download" class="main-section">
+				<header>Download</header>
+				<p>via <code>npm</code> :
+<pre>
+<code class="code_snippet prettyprint">npm install scrollipop</code>
+</pre>	
+				<p>Or download the package files from <a href="https://github.com/ligipop/scrollipop" target="_blank">Github</a>.
+				</p>
+			</section>
+			<section id="setup" class="main-section">
+				<header>Setup</header>
+				<p>Incorporate the js file into the page:</p>
+<pre>
+<code class="code_snippet prettyprint">&lt;script src="scrollipop.js"&gt;&lt;&sol;script&gt;
+
+</code>
+</pre>
+			</section>
+			<section id="usage" class="main-section">
+				<header>Usage</header>
+				<li>Add pages by adding <code>divs</code>.</li>
+				<li>Any <code>div</code> placed as a child of <code>body</code> will create a fullscreen page.</li>
+					
+				
+				
+<pre>
+<code class="code_snippet prettyprint">&lt;body&gt;
+  &lt;div&gt;&lt;&excl;&minus;&minus;Page 1&minus;&minus;&gt;&lt;&sol;div&gt;
+  &lt;div&gt;&lt;&excl;&minus;&minus;Page 2&minus;&minus;&gt;&lt;&sol;div&gt;
+  &lt;div&gt;&lt;&excl;&minus;&minus;Page 3&minus;&minus;&gt;&lt;&sol;div&gt;
+&lt;&sol;body&gt;
+</code>
+</pre>
+			</section>
+			<section id="adding_a_navigation" class="main-section">
+				<header>Adding a Navigation</header>
+				<li>Navigation MUST be defined by the <code>nav</code> tag.</li>
+				<li>You may utilize either the <code>nav > ul > li</code> or the <code>nav > a</code> format.</li>
+				<li>Create one link per number of pages. Name them whatever you want!</li>			
+<pre>
+<code class="code_snippet prettyprint">&lt;body&gt;
+  &lt;div&gt; &lt;&excl;&minus;&minus;Page 1 div&minus;&minus;&gt;
+     &lt;nav&gt; &lt;&excl;&minus;&minus;Navigation&minus;&minus;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Link 1&lt;&sol;li&gt;
+          &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 3&lt;&sol;li&gt;
+        &lt;&sol;ul&gt;
+     &lt;&sol;nav&gt;
+     &lt;p&gt;Hello World!&lt;&sol;p&gt; &lt;&excl;&minus;&minus;Other design elements on page 1&minus;&minus;&gt;
+  &lt;&sol;div&gt;
+</code>
+</pre>
+				<p>The <code>nav</code> tag may also be placed as a child of <code>body</code>. The navigation MUST be either a child of <code>body</code> or a child of any page <code>div</code>.</p>
+<pre>
+<code class="code_snippet prettyprint">&lt;body&gt;
+  &lt;nav&gt; &lt;&excl;&minus;&minus;Navigation&minus;&minus;&gt;
+    &lt;a&gt;Link 1&lt;&sol;a&gt;
+    &lt;a&gt;Link 2&lt;&sol;a&gt;
+    &lt;a&gt;Link 3&lt;&sol;a&gt;
+  &lt;&sol;nav&gt;
+
+  &lt;div&gt; &lt;&excl;&minus;&minus;Page 1 div&minus;&minus;&gt;
+     &lt;p&gt;Hello World!&lt;&sol;p&gt; &lt;&excl;&minus;&minus;Other design elements on page&minus;&minus;&gt;
+  &lt;&sol;div&gt;
+</code>
+</pre>
+			</section>
+			<section id="multiple_nav_elements" class="main-section">
+				<header>Multiple Nav Elements</header>
+				<p>If multiple navigation menus exist and are children of either <code>body</code> or a page <code>div</code>, add the class name <code>main_nav</code> to whichever navigation instance(s) meant to iterate the site. </p>
+<pre>
+<code class="code_snippet prettyprint">&lt;body&gt;
+  &lt;div&gt; &lt;&excl;&minus;&minus;Page 1 div&minus;&minus;&gt;
+     &lt;nav&gt; &lt;&excl;&minus;&minus;This menu will NOT scroll through the site's pages.&minus;&minus;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Link 1&lt;&sol;li&gt;
+          &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 3&lt;&sol;li&gt;
+        &lt;&sol;ul&gt;
+     &lt;&sol;nav&gt;
+
+     &lt;nav class="main_nav"&gt; &lt;&excl;&minus;&minus;This menu WILL scroll through the site's pages&minus;&minus;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Link 1&lt;&sol;li&gt;
+          &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 3&lt;&sol;li&gt;
+        &lt;&sol;ul&gt;
+     &lt;&sol;nav&gt;
+
+     &lt;p&gt;Hello World!&lt;&sol;p&gt; &lt;&excl;&minus;&minus;Other design elements on page&minus;&minus;&gt;
+  &lt;&sol;div&gt;
+</code>
+</pre>
+				<p>If multiple navigations exist, only <code>navs</code> with the class name <code>main_nav</code> will iterate the site. If none are identified with this class name, none will function.</p>
+			</section>
+			<section id="styling" class="main-section">
+				<header>Styling</header>
+				<pre>
+<code class="code_snippet prettyprint">&lt;body&gt;
+  &lt;div&gt;
+     &lt;p&gt;Hello World!&lt;&sol;p&gt;
+    
+     &lt;nav id="best_nav" class="main_nav inst1"&gt; 
+        &lt;ul&gt;
+          &lt;li&gt;Link 1&lt;&sol;li&gt;
+          &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 3&lt;&sol;li&gt;
+        &lt;&sol;ul&gt;
+     &lt;&sol;nav&gt;
+  &lt;&sol;div&gt;
+</code>
+</pre>
+			<p>You may give any elements of your navigation an <code>id</code> or <code>class</code> name to style with CSS or JS as usual.</p>		
+			<p>NOTE: This plugin reserves certain data attributes to function. Be careful when using them with HTML elements.</p>
+			
+			</section>
+		</main>
+
+		<!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+	</body>
+</html>
